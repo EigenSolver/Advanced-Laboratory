@@ -1,0 +1,268 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9311,        260]
+NotebookOptionsPosition[      8419,        240]
+NotebookOutlinePosition[      8778,        256]
+CellTagsIndexPosition[      8735,        253]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SimpleHistogram", "[", "thisData_", "]"}], ":=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"thisMean", "=", 
+      RowBox[{"N", "[", 
+       RowBox[{"Mean", "[", 
+        RowBox[{"Select", "[", 
+         RowBox[{"thisData", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#1", "\[GreaterEqual]", "rangemin"}], "&&", 
+            RowBox[{"#1", "\[LessEqual]", "rangemax"}]}], "&"}]}], "]"}], 
+        "]"}], "]"}]}], ";", 
+     RowBox[{"thisSigma", "=", 
+      RowBox[{"N", "[", 
+       RowBox[{"StandardDeviation", "[", 
+        RowBox[{"Select", "[", 
+         RowBox[{"thisData", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#1", "\[GreaterEqual]", "rangemin"}], "&&", 
+            RowBox[{"#1", "\[LessEqual]", "rangemax"}]}], "&"}]}], "]"}], 
+        "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"thisLength", "=", 
+      RowBox[{"N", "[", 
+       RowBox[{"Length", "[", 
+        RowBox[{"Select", "[", 
+         RowBox[{"thisData", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#1", "\[GreaterEqual]", "rangemin"}], "&&", 
+            RowBox[{"#1", "\[LessEqual]", "rangemax"}]}], "&"}]}], "]"}], 
+        "]"}], "]"}]}], ";", 
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"Histogram", "[", 
+        RowBox[{"thisData", ",", 
+         RowBox[{"{", 
+          RowBox[{"rangemin", ",", "rangemax", ",", "width"}], "}"}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", 
+          RowBox[{"\"\<N=\>\"", "<>", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"N", "[", "thisLength", "]"}], ",", "0", ",", 
+              RowBox[{"NumberPoint", "->", "\"\<\>\""}]}], "]"}], "]"}], 
+           "<>", "\"\<, mean=\>\"", "<>", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"N", "[", "thisMean", "]"}], ",", "3"}], "]"}], "]"}], 
+           "<>", "\"\<,  sigma=\>\"", "<>", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"N", "[", "thisSigma", "]"}], ",", "3"}], "]"}], 
+            "]"}]}]}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<data value\>\"", ",", "\"\<counts per bin\>\""}], 
+           "}"}]}]}], "]"}], ",", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"thisLength", " ", "width", " ", 
+            RowBox[{"E", "^", 
+             RowBox[{"(", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"x", "-", "thisMean"}], ")"}], "^", "2"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{"2", " ", 
+                   RowBox[{"thisSigma", "^", "2"}]}], ")"}]}], ")"}]}], 
+              ")"}]}]}], ")"}], "/", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{"2", " ", "\[Pi]", " ", 
+            RowBox[{"thisSigma", "^", "2"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "rangemin", ",", "rangemax"}], "}"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rangemin", ",", 
+        RowBox[{
+         RowBox[{"Min", "[", "thisData", "]"}], "-", 
+         RowBox[{"0.2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Max", "[", "thisData", "]"}], "-", 
+            RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}], ",", 
+        "Minimum"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"Min", "[", "thisData", "]"}], "-", 
+       RowBox[{"0.2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "thisData", "]"}], "-", 
+          RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Max", "[", "thisData", "]"}], "+", 
+       RowBox[{"0.2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "thisData", "]"}], "-", 
+          RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rangemax", ",", 
+        RowBox[{
+         RowBox[{"Max", "[", "thisData", "]"}], "+", 
+         RowBox[{"0.2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Max", "[", "thisData", "]"}], "-", 
+            RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}], ",", 
+        "Maximum"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"Min", "[", "thisData", "]"}], "-", 
+       RowBox[{"0.2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "thisData", "]"}], "-", 
+          RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Max", "[", "thisData", "]"}], "+", 
+       RowBox[{"0.2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Max", "[", "thisData", "]"}], "-", 
+          RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"width", ",", 
+        RowBox[{"N", "[", 
+         RowBox[{
+          RowBox[{"1", "/", "10"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Max", "[", "thisData", "]"}], "-", 
+            RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}], "]"}], ",", 
+        RowBox[{"Bin", " ", "width"}]}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"1", "/", "300"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Max", "[", "thisData", "]"}], "-", 
+         RowBox[{"Min", "[", "thisData", "]"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Max", "[", "thisData", "]"}], "-", 
+       RowBox[{"Min", "[", "thisData", "]"}]}]}], "}"}], ",", 
+    RowBox[{"ControlType", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"InputField", ",", "InputField", ",", "InputField"}], "}"}]}]}],
+    "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.721071083576429*^9},ExpressionUUID->"cca84321-243c-4be9-a51f-\
+ece2e8eca6fe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"{", "}"}]}], ";", 
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"AppendTo", "[", 
+     RowBox[{"t", ",", 
+      RowBox[{"Mean", "[", 
+       RowBox[{"RandomVariate", "[", 
+        RowBox[{
+         RowBox[{"DiscreteUniformDistribution", "[", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1"}], "}"}], "]"}], ",", "100"}], "]"}], 
+       "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "10000"}], "}"}]}], "]"}], ";", " ", 
+  RowBox[{"SimpleHistogram", "[", "t", "]"}]}]], "Input",
+ CellChangeTimes->{{3.721071241676592*^9, 3.7210712419738417`*^9}, {
+   3.721071863032982*^9, 3.72107189076453*^9}, 
+   3.721071958248645*^9},ExpressionUUID->"8d6783d9-5658-41ac-a9e6-\
+3c97744fb6b7"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.721071965166411*^9, {3.7251116781179733`*^9, 
+   3.7251116789324102`*^9}},ExpressionUUID->"788f440d-fe14-491d-b541-\
+a4799bacdc31"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.725111674580092*^9, 
+  3.7251116753935204`*^9}},ExpressionUUID->"b8148648-1f44-4e32-a734-\
+4cc85c70a6eb"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7210719446116047`*^9, {3.725111670710023*^9, 
+   3.725111671467361*^9}},ExpressionUUID->"cd327f15-1caf-467a-8c87-\
+cb7b82697bf4"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.725111666827667*^9, 
+  3.7251116681437063`*^9}},ExpressionUUID->"24b6c050-bd8e-4d62-8755-\
+49f1a002fc71"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7210714038672323`*^9, {3.721071934034335*^9, 3.721071936529955*^9}, {
+   3.725111662269314*^9, 
+   3.725111663405416*^9}},ExpressionUUID->"eedeff0b-b2d8-4c91-9ecb-\
+b322a28cb002"]
+},
+WindowSize->{808, 587},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6177, 166, 409, "Input",ExpressionUUID->"cca84321-243c-4be9-a51f-ece2e8eca6fe"],
+Cell[6738, 188, 762, 21, 94, "Input",ExpressionUUID->"8d6783d9-5658-41ac-a9e6-3c97744fb6b7"],
+Cell[7503, 211, 182, 4, 30, "Input",ExpressionUUID->"788f440d-fe14-491d-b541-a4799bacdc31"],
+Cell[7688, 217, 154, 3, 30, InheritFromParent,ExpressionUUID->"b8148648-1f44-4e32-a734-4cc85c70a6eb"],
+Cell[7845, 222, 180, 4, 30, "Input",ExpressionUUID->"cd327f15-1caf-467a-8c87-cb7b82697bf4"],
+Cell[8028, 228, 154, 3, 30, InheritFromParent,ExpressionUUID->"24b6c050-bd8e-4d62-8755-49f1a002fc71"],
+Cell[8185, 233, 230, 5, 30, "Input",ExpressionUUID->"eedeff0b-b2d8-4c91-9ecb-b322a28cb002"]
+}
+]
+*)
+

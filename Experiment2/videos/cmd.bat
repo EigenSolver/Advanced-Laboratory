@@ -1,0 +1,1 @@
+ffmpeg -i "obj.mp4" -pix_fmt gray -r 5 -s 720x1280  "obj.avi"

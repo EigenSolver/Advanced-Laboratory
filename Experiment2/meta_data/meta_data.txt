@@ -1,0 +1,14 @@
+data_file name: 01A.csv 01 is the number of the video, A is the identifier of the droplet.
+
+The cmd.bat is a shellscrpit to compress the video (it's too large).
+cmd as below
+ffmpeg -i "obj.mp4" -pix_fmt gray -r 5 -s 720x1280  "obj.avi"
+
+The original video is mp4 format with 1080P 60fps in rgb32 color.
+It's converted to to avi format with 720P 5fps in grayscale color.
+
+
+video 01-05 Wed. May 01 504V 21.5C 
+video 06-13 Mon. April 29 501V 22.0C 
+Mon. May 06 503V 2.24 @ 1:56   2.18 for 7D 2.20 @ 5:05 Voltage at 505
+Wed. May 08 510V 2.24 @~2   2.19 @ 3:26 2.20 for 13D 505V on psu 
