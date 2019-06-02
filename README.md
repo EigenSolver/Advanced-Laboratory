@@ -16,11 +16,7 @@ Bevington.pdf & Taylor.pdf
 2. Experiment2: 密立根油滴实验
 3. Experiment3：海平面mu介子寿命和通量测量
 
-Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文档 
-
-Lab_Report.pdf 为最终实验报告 （无本地文件，使用Overleaf在线完成）
-
-Lab_Note为实验过程中所做的笔记（对于复现实验来说非常重要）
+Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文档，Lab_Report.pdf 为最终实验报告（无本地文件，使用Overleaf在线完成），Lab_Note为实验过程中所做的笔记（对于复现实验来说非常重要）。
 
 
 May.30th at UCSB
