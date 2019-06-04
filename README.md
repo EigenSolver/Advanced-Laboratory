@@ -123,12 +123,10 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 <a href="https://www.codecogs.com/eqnedit.php?latex=$(6.68\pm&space;0.21)&space;\times&space;10^{-11}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$(6.68\pm&space;0.21)&space;\times&space;10^{-11}$" title="$(6.68\pm 0.21) \times 10^{-11}$" /></a> 
 对比实际值
 <a href="https://www.codecogs.com/eqnedit.php?latex=$&space;6.67048&space;\times&space;10^{-11}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;6.67048&space;\times&space;10^{-11}$" title="$ 6.67048 \times 10^{-11}$" /></a>。
+
 *计算误差是数据处理最容易被忽视的部分，也是物理实验最重要的部分，没有误差和不确定度的测量结果毫无意义。*
 
-实验的可信度完全来自误差的分析，例如可能你的测量非常精确，与理论标准值仅差距0.01% ，但标准值却在测量的3 sigma范围之外，这仍然说明你的测量存在系统误差，实验设计并不合理。或者你的结果与实验非常接近，但是测量标准差非常大，可能是差距的五到十倍，那很有可能这次测量只是运气的结果。
-
-
-**请一定注意——严谨的误差讨论是实验的灵魂。**
+实验的可信度完全来自误差的分析，例如可能你的测量非常精确，与理论标准值仅差距0.01% ，但标准值却在测量的3 sigma范围之外，这仍然说明你的测量存在系统误差，实验设计并不合理。或者你的结果与实验非常接近，但是测量标准差非常大，可能是差距的五到十倍，那很有可能这次测量只是运气的结果。总之，请一定注意**严谨的误差讨论是实验的灵魂。**
 
 参考: 
 [科学中的5 sigma 原则](https://blogs.scientificamerican.com/observations/five-sigmawhats-that/?redirect=1)
@@ -141,6 +139,8 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 例如 Python 笔记本：
 - [Muon 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
 - [Millikan 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
+
+
 当然，你也可以使用Mathematica Notebook来分析实验数据，或者进行基本的误差分析（Error Propagation）
 - [Cavendish 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment1/expriment_1.nb)
 
