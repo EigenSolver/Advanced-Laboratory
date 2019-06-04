@@ -58,7 +58,9 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 
 同样，记住工程和技术只是为你的实验服务的，你的焦点在于如何快速实现实验设计而不是该死的工程细节（比如这个PCB怎么焊），再一次强调快速学习能力的重要。快速地开始你的实验搭建，边做边学，反复迭代试错是最好的实践模式。如果你要学完一整本数字电路和单片机系统（或者Python数据分析和可视化）之后才开始搭建实验仪器（分析实验数据），大概你只能参加下一届CUPT了（不，真相是你到了毕业都学不完的，没错哪怕是研究生毕业）。
 
+
 不会就问，尽可能的利用网络和实验室的各种资源（学长，指导老师，各种文件资料）快速学习，这样你才有可能在一个月里搞定这些题目。
+
 
 参见 [实验室里用的仪器，都是科学家自己设计的吗？](https://daily.zhihu.com/story/9168349)
 参考书 ps: 这本书可以当字典用，不会就查，看完是不可能看完的 [Building Scientific Apparatus](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/John%20H.%20Moore%2C%20Christopher%20C.%20Davis%2C%20Michael%20A.%20Coplan%2C%20Sandra%20C.%20Greer%20-%20Building%20Scientific%20Apparatus%20(2009%2C%20Cambridge%20University%20Press).pdf)
@@ -71,6 +73,7 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 
 为了避免这样的故事，请一定在实验中秉承严谨认真的态度，留意每一个细节。同时使用**实验记录**来保存实验的第一手资料，**这一点非常重要**。
 
+
 实验记录应该包含：
 - 基本的原始信息，实验时间，合作队友等。
 - 实验细节，例如相关仪器参数，环境参数
@@ -79,8 +82,10 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 - 实验中遇到的问题和bug，以及相关分析
 - 对误差的评估，以及减小误差的思路
 
+
 总之实验记录源于工程实践的经验，就像是工程中的开发文档，测试记录。
 301之前这一方面做的很差，因为完全没有意识。大量的第一手计算手稿都是随手一划，惨遭丢弃。实验进程全靠反复试错后的个人经验积累，效率低下。实验记录也是在国内本科生的实验课程体系中是几乎被忽视的一个环节，因为详实可靠的实验记录需要很高的时间成本。但实际上磨刀不误砍柴工，经过系统整理的实验报告，可以大大提高你的效率：
+
 
 - 有效降低实验失误的几率，避免了大量无谓的debug和重复实验的时间。
 - 可以从过去的实验笔记中不断总结问题，并且改进实验设计
@@ -88,12 +93,13 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 - 展示和报告，你可以通过原始试验记录快速构建实验报告或者presentation
 
 实验记录举例
-[Muon Lab Note](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Lab_Note.pdf)
-[卓越杯摸鱼记录](https://github.com/Neuromancer43/Ultraino/blob/master/Test_Log/test_log.txt)
+- [Muon Lab Note](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Lab_Note.pdf)
+- [卓越杯摸鱼记录](https://github.com/Neuromancer43/Ultraino/blob/master/Test_Log/test_log.txt)
+
 
 参考
-[MIT: How to use your Lab Notebook](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/labnotebooks.pdf)
-[NIH: Keeping a Lab Notebook](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Lab_Notebook_508_(new).pdf)
+- [MIT: How to use your Lab Notebook](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/labnotebooks.pdf)
+- [NIH: Keeping a Lab Notebook](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Lab_Notebook_508_(new).pdf)
 
 ## 4. 数据处理和误差分析
 
@@ -106,42 +112,45 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 
 **实验的可信度完全来自误差的分析，例如可能你的测量非常精确，与理论标准值仅差距0.01% ，但标准值却在测量的3 sigma范围之外，这仍然说明你的测量存在系统误差，实验设计并不合理。**或者你的结果与实验非常接近，但是测量标准差非常大，可能是差距的五到十倍，那很有可能这次测量只是运气的结果。
 
-请一定注意严谨的误差讨论是实验的灵魂。
-举例 [科学中的5 sigma 原则](https://blogs.scientificamerican.com/observations/five-sigmawhats-that/?redirect=1)
+
+**请一定注意——严谨的误差讨论是实验的灵魂。**
+
+参考 [科学中的5 sigma 原则](https://blogs.scientificamerican.com/observations/five-sigmawhats-that/?redirect=1)
 
 那么如何处理数据并进行误差分析？
 通常使用Python工具栈数据处理是最高效的，目前科学界的主流数据分析工具是**Jupyter Notebook**。
 如果你以后有志于学术界，那么这项技能是**必备**的（有意见认为Jupyter将是下一代数字化科技论文的标准格式）。
 这里就体现出了自动化数据记录的重要性——如果你是用传感电路获取数据，那么你的计算过程将非常简单愉快。
 
-例如[Muon 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
-和[Millikan 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
-当然，你也可以使用Mathematica Notebook来分析实验数据
-[Cavendish 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment1/expriment_1.nb)
-或者进行基本的误差分析（主要是Error Propagation）
-参见
-[Wiki: Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter)
-[Anaconda科学计算环境](https://www.anaconda.com/distribution/)
+例如 Python 笔记本：
+- [Muon 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
+- [Millikan 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
+当然，你也可以使用Mathematica Notebook来分析实验数据，或者进行基本的误差分析（Error Propagation）
+- [Cavendish 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment1/expriment_1.nb)
 
 当然，如果你需要解微分方程或者引入物理学常数，那么通常Mathematica是更好的选择（简单快速，熟练），但是实际上Python的Sympy(Symbolic Python)包可以提供同样可靠的计算机代数系统。关于科学计算的更多消息请移步网站相关帖子。
+参见
+- [Wiki: Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter)
+- [Anaconda科学计算环境](https://www.anaconda.com/distribution/)
 
 
-通常你需要做
+实验数据分析通常包括
 - 导入格式化数据（csv,tsv,txt,xlsx）等等
 - 进行基本处理，例如求平均值，做差，聚类，线性回归等等
 - 将处理过的数据带入你的理论模型（通常是一个公式，或者数值微分方程，带入数据和参数计算你需要的结果）
 - **使用误差传递公式，计算测量误差和不确定度**
 
-参考 [Wiki: 不确定度传递](https://en.wikipedia.org/wiki/Propagation_of_uncertainty)
-不同形式实验数据的误差大不相同，这取决于具体的实验和理论，如果模型中最终有积分或者曲线拟合这样的操作，那么简单的线性误差公式就不再适用。
+参考：[Wiki: 不确定度传递](https://en.wikipedia.org/wiki/Propagation_of_uncertainty)
 
+
+不同形式实验数据的误差大不相同，这取决于具体的实验和理论，如果模型中最终有积分或者曲线拟合这样的操作，那么简单的线性误差公式就不再适用。
 例如，计数数据的不确定度是<a href="https://www.codecogs.com/eqnedit.php?latex=\sqrt{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sqrt{N}" title="\sqrt{N}" /></a>。而曲线拟合的不确定度通常可由程序得出[StackOverflow: Getting standard errors on fitted parameters using the optimize.leastsq method in python](https://stackoverflow.com/questions/14581358/getting-standard-errors-on-fitted-parameters-using-the-optimize-leastsq-method-i)。
 
 更多关于数据分析和不确定度的讨论请见参考书
-[An Introduction to Data Analysis-Taylor](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Taylor.pdf)
-[Data Reduction and Error Analysis-Bevington](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Bevington.pdf)
+- [An Introduction to Data Analysis-Taylor](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Taylor.pdf)
+- [Data Reduction and Error Analysis-Bevington](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Bevington.pdf)
 
-暂时到这，如果各位学弟学妹有问题欢迎提问，如果觉得写的还可以求点赞（Star）+关注（Follow）。
+暂时到这，如果各位学弟学妹有问题欢迎提问，如果觉得写的还可以求点赞（Star）+关注（Follow）#滑稽。
 
 
 June.4th at UCSB
