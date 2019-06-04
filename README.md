@@ -19,8 +19,9 @@ Bevington.pdf & Taylor.pdf
 Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文档，Lab_Report.pdf 为最终实验报告（无本地文件，使用Overleaf在线完成），Lab_Note为实验过程中所做的笔记（对于复现实验来说非常重要）。
 
 
--------------
+
 鉴于官网还没人维护，鸽了几个月的实验Post就先写在这里了
+-------------
 
 ## 1. 实验设计和物理原理
 设计实验之前一定要对研究目标和背景理论有清晰的认知，理论准备充分才能有良好的实验设计。
@@ -44,9 +45,10 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 
 了解并欣赏经典实验设计可以给你的实验提供良好的直觉，例如Cavendish使用扭称规避地球引力并通过多次转化放大物理量（LIGO测量引力波其实是同样思路），或者Millikan通过操作电场中的带电油雾观察到电荷的量子化特性（Stern-Gerlach实验展现自旋量子性）。
 
-参考 [Wiki: Millikan Experiment](https://en.wikipedia.org/wiki/Oil_drop_experiment)
-[Wiki: Cavendish Experiment](https://en.wikipedia.org/wiki/Cavendish_experiment)
-[知乎：引力波探测的原理](https://www.zhihu.com/question/24079693/answer/38549900)
+参考 
+- [Wiki: Millikan Experiment](https://en.wikipedia.org/wiki/Oil_drop_experiment)
+- [Wiki: Cavendish Experiment](https://en.wikipedia.org/wiki/Cavendish_experiment)
+- [知乎：引力波探测的原理](https://www.zhihu.com/question/24079693/answer/38549900)
 
 ## 2. 实验仪器搭建
 这是一个工程师的话题，如果你不能找到程序员，机械工程师，电子电气工程师帮助你实现实验装置，那就自己学吧，你会发现你秃了也变强了（#滑稽），祝好运。
@@ -71,8 +73,11 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 不会就问，尽可能的利用网络和实验室的各种资源（学长，指导老师，各种文件资料）快速学习，这样你才有可能在一个月里搞定这些题目。
 
 
-参见 [实验室里用的仪器，都是科学家自己设计的吗？](https://daily.zhihu.com/story/9168349)
-参考书 ps: 这本书可以当字典用，不会就查，看完是不可能看完的 [Building Scientific Apparatus](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/John%20H.%20Moore%2C%20Christopher%20C.%20Davis%2C%20Michael%20A.%20Coplan%2C%20Sandra%20C.%20Greer%20-%20Building%20Scientific%20Apparatus%20(2009%2C%20Cambridge%20University%20Press).pdf)
+参考
+- [实验室里用的仪器，都是科学家自己设计的吗？](https://daily.zhihu.com/story/9168349)
+- [Building Scientific Apparatus](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/John%20H.%20Moore%2C%20Christopher%20C.%20Davis%2C%20Michael%20A.%20Coplan%2C%20Sandra%20C.%20Greer%20-%20Building%20Scientific%20Apparatus%20(2009%2C%20Cambridge%20University%20Press).pdf) -ps: 这本书可以当字典用，不会就查，看完是不可能看完的 
+
+
 
 ## 3. 实验过程
 **实验过程是非常重要的！！！！！！！**
@@ -86,7 +91,7 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 实验记录应该包含：
 - 基本的原始信息，实验时间，合作队友等。
 - 实验细节，例如相关仪器参数，环境参数
-- 实验基本操作，例如 1.测量了哪些物理量，2.装置调节过程和方法，参数设置 3. 
+- 实验基本操作，例如 1.测量了哪些物理量，2.装置调节过程和方法，参数设置 
 - 原始数据和基本的演算，对初步结果的评估
 - 实验中遇到的问题和bug，以及相关分析
 - 对误差的评估，以及减小误差的思路
