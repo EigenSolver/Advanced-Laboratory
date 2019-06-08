@@ -157,7 +157,7 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 - [Wiki: Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter)
 - [Anaconda科学计算环境](https://www.anaconda.com/distribution/)
 
-![](https://d3nmt5vlzunoa1.cloudfront.net/pycharm/files/2019/02/Jupyter-Notebooks.png)
+![](https://jupyter.org/assets/jupyterpreview.png)
 
 实验数据分析通常包括
 - 导入格式化数据（csv,tsv,txt,xlsx）等等
