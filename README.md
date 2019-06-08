@@ -20,7 +20,7 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 
 
 
-鉴于官网还没人维护，鸽了几个月的实验Post就先写在这里了![](https://user-images.githubusercontent.com/873584/52933968-098c2f00-3390-11e9-958e-e28dfced2608.gif)
+鉴于官网还没人维护，鸽了几个月的实验Post就先写在这里了
 
 
 
