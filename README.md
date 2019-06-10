@@ -144,9 +144,10 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 如果你以后有志于学术界，那么这项技能是**必备**的（有意见认为Jupyter将是下一代数字化科技论文的标准格式）。
 这里就体现出了自动化数据记录的重要性——如果你是用传感电路获取数据，那么你的计算过程将非常简单愉快。
 
-例如 Python 笔记本：
-- [Muon 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
-- [Millikan 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
+例如 Python 笔记本（原始文件位于本库同名文件夹
+）：
+- [Muon 数据分析](https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
+- [Millikan 数据分析](https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
 
 
 当然，你也可以使用Mathematica Notebook来分析实验数据，或者进行基本的误差分析（Error Propagation）
