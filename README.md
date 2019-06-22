@@ -14,7 +14,8 @@ Bevington.pdf & Taylor.pdf
 实验类型：
 1. Experiment1: 卡文迪许扭称实验 
 2. Experiment2: 密立根油滴实验
-3. Experiment3：海平面mu介子寿命和通量测量
+3. Experiment3: 海平面mu介子寿命和通量测量
+4. Experiment4: 使用云室观察alpha散射
 
 Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文档，Lab_Report.pdf 为最终实验报告（无本地文件，使用Overleaf在线完成），Lab_Note为实验过程中所做的笔记（对于复现实验来说非常重要）。
 
@@ -148,7 +149,7 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 ）：
 - [Muon 数据分析](https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb)
 - [Millikan 数据分析](https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb)
-
+- [Cloud Chamber 数据分析](https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment4/Cloud%20Chamber.ipynb)
 
 当然，你也可以使用Mathematica Notebook来分析实验数据，或者进行基本的误差分析（Error Propagation）
 - [Cavendish 数据分析](https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment1/expriment_1.nb)
