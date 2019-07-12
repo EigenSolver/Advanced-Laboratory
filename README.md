@@ -180,6 +180,5 @@ Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文�
 暂时到这，如果各位学弟学妹有问题欢迎提问，如果觉得写的还可以求点赞（Star）+关注（Follow）#滑稽。
 
 
-June.4th at UCSB
-
+June.4th, 2019 @ UC Santa Barbara
 
